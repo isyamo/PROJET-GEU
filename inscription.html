@@ -1,16 +1,66 @@
 <!DOCTYPE html>
-<html>
-    <head>  
-        <title>Formulaire avec CSS</title>
-        <meta charset="utf-8"/> 
-        <link rel="stylesheet" href="style.css" type="text/css" >
-       
-    </head>
-    
-    <body >
-        
-        
-    </body>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8"/>
+  <title>Inscription — GEU ENS Marrakech</title>
+  <link rel="stylesheet" href="Inscription.css"/>
+</head>
+<body>
 
+  <div class="card">
+    <h1 align="center">Inscription à un événement</h1>
+    <p class="sub" align="center" >GEU — ENS Marrakech</p>
 
+    <form id="form">
+
+      <div class="row">
+        <div>
+          <label>Nom</label>
+          <input type="text" id="nom" placeholder="Votre nom" required/>
+        </div>
+        <div>
+          <label>Prénom</label>
+          <input type="text" id="prenom" placeholder="Votre prénom" required/>
+        </div>
+      </div>
+
+      <label>Email</label>
+      <input type="email" id="email" placeholder="prenom.nom@ens.ac.ma" required/>
+
+      <label>Téléphone</label>
+      <input type="tel" id="tel" placeholder="+212 XXX XXX XXX"/>
+
+      <label>Filière</label>
+      <select id="filiere" required>
+        <option value="" disabled selected>Sélectionnez votre filière</option>
+        <option>Mathématiques</option>
+        <option>Physique-Chimie</option>
+        <option>Informatique</option>
+        <option>Langue Arabe</option>
+        <option>Langue Française</option>
+        <option>Histoire-Géographie</option>
+        <option>Éducation Physique</option>
+        <option>Autre</option>
+      </select>
+
+      <label>Niveau</label>
+      <select id="niveau" required>
+        <option value="" disabled selected>Sélectionnez votre niveau</option>
+        <option>1ère année</option>
+        <option>2ème année</option>
+        <option>3ème année</option>
+        <option>Master</option>
+        <option>Doctorat</option>
+        <option>Enseignant / Personnel</option>
+      </select>
+
+      <div class="btns">
+        <button type="submit" class="btn-send">Envoyer</button>
+        <button type="reset" class="btn-delete">Supprimer</button>
+      </div>
+
+    </form>
+  </div>
+
+</body>
 </html>
