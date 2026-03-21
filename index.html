@@ -1,16 +1,142 @@
 <!DOCTYPE html>
-<html>
-    <head>  
-        <title>Formulaire avec CSS</title>
-        <meta charset="utf-8"/> 
-        <link rel="stylesheet" href="style.css" type="text/css" >
-       
-    </head>
-    
-    <body >
-        
-        
-    </body>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8"/>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>GEU — ENS Marrakech</title>
 
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,700;0,900;1,400&family=DM+Sans:wght@300;400;500;600&display=swap" rel="stylesheet"/>
+  <link href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap/5.3.3/css/bootstrap.min.css" rel="stylesheet"/>
+  <link rel="stylesheet" href="style.css"/>
+</head>
+<body>
 
+  <div id="loader">
+    <div class="spinner-border text-success" style="width: 4rem; height: 4rem;" role="status">
+      <span class="visually-hidden">Chargement...</span>
+    </div>
+  </div>
+
+  <nav class="navbar navbar-expand-md navbar-dark fixed-top custom-navbar">
+    <div class="container">
+      <a class="navbar-brand" href="#">
+        <img src="logo_uca.png" alt="Logo GEU" height="60" onerror="this.src='https://via.placeholder.com/150x60?text=LOGO'">
+      </a>
+      
+      <button class="navbar-toggler shadow-none border-0" type="button" data-bs-toggle="collapse" data-bs-target="#navbarResponsive">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      
+      <div class="collapse navbar-collapse" id="navbarResponsive">
+        <ul class="navbar-nav ms-auto mb-2 mb-lg-0 fw-bold">
+
+          <li class="nav-item">
+            <a class="nav-link active" href="#">Accueil</a>
+          </li>
+
+          <li class="nav-item">
+            <a class="nav-link" href="#">Événements</a>
+          </li>
+          
+          <li class="nav-item dropdown">
+            <a class="nav-link dropdown-toggle" href="recherche.html" id="rechercheDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+              Recherche
+            </a>
+            <!--  Le dropdown est ICI, à l'intérieur de la navbar -->
+            <ul class="dropdown-menu dropdown-menu-end shadow border-0 custom-dropdown" aria-labelledby="rechercheDropdown">
+              <li><a class="dropdown-item" href="recherche.html#conferences">Conférence</a></li>
+              <li><a class="dropdown-item" href="recherche.html#formations">Formation</a></li>
+              <li><a class="dropdown-item" href="recherche.html#traditions">Événement traditionnel</a></li>
+            </ul>
+          </li>
+
+        </ul>
+      </div>
+    </div>
+  </nav>
+
+  <section class="hero-section d-flex align-items-center justify-content-center">
+    <div class="container text-center text-white z-1">
+      
+      <div class="mb-4">
+        <span class="text-success text-uppercase fw-bold" style="letter-spacing: 0.2em; font-size: 13px;">Nos Événements</span>
+        <h2 class="fw-bold mt-2" style="font-family: 'Playfair Display', serif; font-size: 2.8rem;">Agenda <em class="text-success">Culturel</em></h2>
+        <div style="width: 50px; height: 3px; background: #1db954; margin: 15px auto 0;"></div>
+      </div>
+
+      <div id="eventsCarousel" class="carousel slide mx-auto shadow-lg custom-carousel" data-bs-ride="carousel">
+        
+        <div class="carousel-indicators mb-4">
+          <button type="button" data-bs-target="#eventsCarousel" data-bs-slide-to="0" class="active" aria-current="true"></button>
+          <button type="button" data-bs-target="#eventsCarousel" data-bs-slide-to="1"></button>
+          <button type="button" data-bs-target="#eventsCarousel" data-bs-slide-to="2"></button>
+        </div>
+
+        <div class="carousel-inner h-100">
+          
+          <div class="carousel-item active h-100">
+            <img src="https://images.unsplash.com/photo-1540575467063-178a50c2df87?ixlib=rb-4.0.3&auto=format&fit=crop&w=1000&q=80" class="d-block w-100 h-100 img-cover" alt="Spectacle">
+            <div class="carousel-caption d-flex flex-column justify-content-end pb-5 h-100 carousel-overlay">
+              <span class="text-success fw-bold text-uppercase" style="font-size: 12px; letter-spacing: 0.2em;">01 Mars 2026</span>
+              <h3 class="fw-bold my-2" style="font-family: 'Playfair Display', serif;">Spectacle Vivant</h3>
+              <p class="small text-light d-none d-md-block px-4">Une journée de spectacles vivants, expositions artistiques et performances célébrant la diversité.</p>
+              <div class="mt-3">
+                <a href="#" class="btn btn-success rounded-pill fw-bold px-4 py-2 shadow">S'inscrire →</a>
+              </div>
+            </div>
+          </div>
+          
+          <div class="carousel-item h-100">
+            <img src="https://images.unsplash.com/photo-1513364776144-60967b0f800f?ixlib=rb-4.0.3&auto=format&fit=crop&w=1000&q=80" class="d-block w-100 h-100 img-cover" alt="Art">
+            <div class="carousel-caption d-flex flex-column justify-content-end pb-5 h-100 carousel-overlay">
+              <span class="text-success fw-bold text-uppercase" style="font-size: 12px; letter-spacing: 0.2em;">15 Avril 2026</span>
+              <h3 class="fw-bold my-2" style="font-family: 'Playfair Display', serif;">Exposition Artistique</h3>
+              <p class="small text-light d-none d-md-block px-4">Découvrez les créations artistiques des étudiants de l'ENS Marrakech.</p>
+              <div class="mt-3">
+                <a href="#" class="btn btn-success rounded-pill fw-bold px-4 py-2 shadow">S'inscrire →</a>
+              </div>
+            </div>
+          </div>
+
+          <div class="carousel-item h-100">
+            <img src="https://images.unsplash.com/photo-1492684223066-81342ee5ff30?ixlib=rb-4.0.3&auto=format&fit=crop&w=1000&q=80" class="d-block w-100 h-100 img-cover" alt="Culture">
+            <div class="carousel-caption d-flex flex-column justify-content-end pb-5 h-100 carousel-overlay">
+              <span class="text-success fw-bold text-uppercase" style="font-size: 12px; letter-spacing: 0.2em;">20 Mai 2026</span>
+              <h3 class="fw-bold my-2" style="font-family: 'Playfair Display', serif;">Festival Culturel</h3>
+              <p class="small text-light d-none d-md-block px-4">Un festival mettant en lumière le patrimoine et la culture marocaine.</p>
+              <div class="mt-3">
+                <a href="#" class="btn btn-success rounded-pill fw-bold px-4 py-2 shadow">S'inscrire →</a>
+              </div>
+            </div>
+          </div>
+
+        </div>
+
+        <button class="carousel-control-prev" type="button" data-bs-target="#eventsCarousel" data-bs-slide="prev">
+          <span class="carousel-control-prev-icon rounded-circle p-3 custom-arrow" aria-hidden="true"></span>
+          <span class="visually-hidden">Précédent</span>
+        </button>
+        <button class="carousel-control-next" type="button" data-bs-target="#eventsCarousel" data-bs-slide="next">
+          <span class="carousel-control-next-icon rounded-circle p-3 custom-arrow" aria-hidden="true"></span>
+          <span class="visually-hidden">Suivant</span>
+        </button>
+      </div>
+
+    </div>
+  </section>
+
+  <footer class="text-light py-3 custom-footer">
+    <div class="container d-flex flex-column flex-md-row justify-content-between align-items-center">
+      <div class="mb-2 mb-md-0 text-center text-md-start">
+        <span class="text-success fw-bold d-block" style="letter-spacing: 0.08em;">GEU · ENS</span>
+        <small class="text-white-50">TEL: +212 5 24 34 01 25 | EMAIL: contact@geu-marrakech.ac.ma</small>
+      </div>
+      <div>
+        <img src="logo_uca.png" alt="Logo UCA" height="40" style="opacity: 0.9;" onerror="this.src='https://via.placeholder.com/100x40?text=LOGO'">
+      </div>
+    </div>
+  </footer>
+
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/bootstrap/5.3.3/js/bootstrap.bundle.min.js"></script>
+</body>
 </html>
