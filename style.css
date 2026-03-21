@@ -1,0 +1,113 @@
+/* ── D-inscription ── */
+* { margin: 0; padding: 0; box-sizing: border-box; }
+
+body {
+  font-family: 'Segoe UI', sans-serif;
+  background: #eef2ff;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
+  padding: 40px 20px;
+}
+
+.card {
+  background: #fff;
+  border-radius: 16px;
+  padding: 36px;
+  width: 100%;
+  max-width: 500px;
+  box-shadow: 0 8px 30px rgba(99, 102, 241, 0.12);
+  border-top: 5px solid #6366f1;
+}
+
+h1 {
+  font-size: 22px;
+  font-weight: 800;
+  color: #1e1b4b;
+  margin-bottom: 4px;
+}
+
+p.sub {
+  font-size: 13px;
+  color: #a5b4fc;
+  margin-bottom: 28px;
+  font-weight: 500;
+}
+
+label {
+  display: block;
+  font-size: 12px;
+  font-weight: 700;
+  color: #6366f1;
+  margin-bottom: 5px;
+  text-transform: uppercase;
+  letter-spacing: 0.06em;
+}
+
+input, select {
+  width: 100%;
+  padding: 11px 14px;
+  border: 2px solid #e0e7ff;
+  border-radius: 10px;
+  font-size: 14px;
+  color: #1e1b4b;
+  background: #f8f9ff;
+  outline: none;
+  transition: border-color 0.2s, background 0.2s;
+  margin-bottom: 16px;
+  appearance: none;
+}
+
+input:focus, select:focus {
+  border-color: #6366f1;
+  background: #fff;
+}
+
+.row {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 14px;
+}
+
+.btns {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  margin-top: 14px;
+}
+
+button {
+  width: 100%;
+  padding: 13px;
+  border-radius: 999px;
+  font-size: 13px;
+  font-weight: 700;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+  cursor: pointer;
+  transition: all 0.2s;
+}
+
+.btn-send {
+  background: #6366f1;
+  color: #fff;
+  border: none;
+  border: 2px solid #4a08b4;
+}
+.btn-send:hover {
+  background: #4f46e5;
+  transform: translateY(-2px);
+  box-shadow: 0 6px 18px rgba(99, 102, 241, 0.35);
+}
+
+.btn-delete {
+  background-color: #f87171;
+  color: #faf8f8;
+  border: 2px solid #be2424;
+}
+.btn-delete:hover {
+  background: #fef2f2;
+  border-color: #f87171;
+}
+/* ── F-inscription ── */
