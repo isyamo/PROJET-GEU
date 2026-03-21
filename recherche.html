@@ -1,17 +1,167 @@
 <!DOCTYPE html>
-<html>
-    <head>  
-        <title>Formulaire avec CSS</title>
-        <meta charset="utf-8"/> 
-        <link rel="stylesheet" href="style.css" type="text/css" >
-       
-    </head>
-    
-    <body >
-        <h1>SLL</h1>
-        <h2>BJR</h2>
-        
-    </body>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8"/>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Recherche — GEU ENS Marrakech</title>
 
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,700&family=DM+Sans:wght@300;400;500;600&display=swap" rel="stylesheet"/>
+  <link href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap/5.3.3/css/bootstrap.min.css" rel="stylesheet"/>
+  <link rel="stylesheet" href="recherche.css"/>
+</head>
+<body>
 
+  <!-- NAVBAR -->
+  <nav class="navbar navbar-expand-md navbar-dark fixed-top custom-navbar">
+    <div class="container">
+      <a class="navbar-brand" href="index.html">
+        <img src="logo_uca.png" alt="Logo GEU" height="60"
+             onerror="this.src='https://via.placeholder.com/150x60?text=LOGO'">
+      </a>
+      <button class="navbar-toggler shadow-none border-0" type="button"
+              data-bs-toggle="collapse" data-bs-target="#navbarResponsive">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse" id="navbarResponsive">
+        <ul class="navbar-nav ms-auto mb-2 mb-lg-0 fw-bold">
+          <li class="nav-item"><a class="nav-link" href="index.html">Accueil</a></li>
+          <li class="nav-item"><a class="nav-link" href="#">Événements</a></li>
+          <li class="nav-item dropdown">
+            <a class="nav-link dropdown-toggle active" href="recherche.html"
+               id="rechercheDropdown" role="button" data-bs-toggle="dropdown">Recherche</a>
+            <ul class="dropdown-menu dropdown-menu-end shadow border-0 custom-dropdown">
+              <li><a class="dropdown-item" href="#conferences">Conférence</a></li>
+              <li><a class="dropdown-item" href="#formations">Formation</a></li>
+              <li><a class="dropdown-item" href="#traditions">Événement traditionnel</a></li>
+            </ul>
+          </li>
+        </ul>
+      </div>
+    </div>
+  </nav>
+
+  <!-- CONTENU -->
+  <main class="page-wrapper">
+    <div class="container">
+
+      <!-- TITRE -->
+      <div class="text-center mb-5">
+        <span class="eyebrow">Explorer</span>
+        <h1 class="page-title">Agenda <em>Culturel</em></h1>
+        <div class="header-line"></div>
+      </div>
+
+      <!-- CONFÉRENCES -->
+      <section id="conferences" class="mb-5">
+        <h2 class="section-title">🎤 Conférences</h2>
+
+        <div class="event-row">
+          <img src="https://images.unsplash.com/photo-1677442135703-1787eea5ce01?w=120&q=80" alt="IA" class="event-img">
+          <div class="event-info">
+            <span class="event-name">Intelligence Artificielle &amp; Éducation</span>
+            <span class="event-meta">📅 10 Avril 2026 &nbsp;·&nbsp; 📍 Amphi A, ENS</span>
+            <span class="event-desc">Comment l'IA transforme les pratiques pédagogiques dans l'enseignement supérieur.</span>
+          </div>
+        </div>
+
+        <div class="event-row">
+          <img src="https://images.unsplash.com/photo-1506905925346-21bda4d32df4?w=120&q=80" alt="Durable" class="event-img">
+          <div class="event-info">
+            <span class="event-name">Développement Durable</span>
+            <span class="event-meta">📅 28 Avril 2026 &nbsp;·&nbsp; 📍 Salle des conférences</span>
+            <span class="event-desc">Les enjeux environnementaux et le rôle des étudiants dans la transition écologique.</span>
+          </div>
+        </div>
+
+        <div class="event-row">
+          <img src="https://images.unsplash.com/photo-1481627834876-b7833e8f5570?w=120&q=80" alt="Littérature" class="event-img">
+          <div class="event-info">
+            <span class="event-name">Littérature Marocaine Contemporaine</span>
+            <span class="event-meta">📅 12 Mai 2026 &nbsp;·&nbsp; 📍 Bibliothèque centrale</span>
+            <span class="event-desc">Rencontre avec des auteurs marocains primés. Débat sur l'identité culturelle.</span>
+          </div>
+        </div>
+      </section>
+
+      <!-- FORMATIONS -->
+      <section id="formations" class="mb-5">
+        <h2 class="section-title">📚 Formations</h2>
+
+        <div class="event-row">
+          <img src="https://images.unsplash.com/photo-1552581234-26160f608093?w=120&q=80" alt="Parole" class="event-img">
+          <div class="event-info">
+            <span class="event-name">Atelier Prise de Parole en Public</span>
+            <span class="event-meta">📅 5 Avril 2026 &nbsp;·&nbsp; 📍 Salle 204</span>
+            <span class="event-desc">Développez vos compétences en éloquence et communication orale. 2 jours intensifs.</span>
+          </div>
+        </div>
+
+        <div class="event-row">
+          <img src="https://images.unsplash.com/photo-1531403009284-440f080d1e12?w=120&q=80" alt="Design" class="event-img">
+          <div class="event-info">
+            <span class="event-name">Formation : Design Thinking</span>
+            <span class="event-meta">📅 19 Avril 2026 &nbsp;·&nbsp; 📍 FabLab ENS</span>
+            <span class="event-desc">Résoudre des problèmes complexes par l'innovation centrée sur l'humain.</span>
+          </div>
+        </div>
+
+        <div class="event-row">
+          <img src="https://images.unsplash.com/photo-1434030216411-0b793f4b4173?w=120&q=80" alt="Recherche" class="event-img">
+          <div class="event-info">
+            <span class="event-name">Initiation à la Recherche Scientifique</span>
+            <span class="event-meta">📅 3 Mai 2026 &nbsp;·&nbsp; 📍 Labo Informatique</span>
+            <span class="event-desc">Méthodologie et rédaction académique pour les étudiants en master et doctorat.</span>
+          </div>
+        </div>
+      </section>
+
+      <!-- ÉVÉNEMENTS TRADITIONNELS -->
+      <section id="traditions" class="mb-5">
+        <h2 class="section-title">🎭 Événements Traditionnels</h2>
+
+        <div class="event-row">
+          <img src="https://images.unsplash.com/photo-1558618666-fcd25c85cd64?w=120&q=80" alt="Amazigh" class="event-img">
+          <div class="event-info">
+            <span class="event-name">Nuit du Patrimoine Amazigh</span>
+            <span class="event-meta">📅 20 Mars 2026 &nbsp;·&nbsp; 📍 Patio principal, ENS</span>
+            <span class="event-desc">Soirée de musique, danses et contes amazighs célébrant la culture berbère du Maroc.</span>
+          </div>
+        </div>
+
+        <div class="event-row">
+          <img src="https://images.unsplash.com/photo-1533174072545-7a4b6ad7a6c3?w=120&q=80" alt="Gnaoua" class="event-img">
+          <div class="event-info">
+            <span class="event-name">Festival Gnaoua Étudiant</span>
+            <span class="event-meta">📅 8 Juin 2026 &nbsp;·&nbsp; 📍 Esplanade de l'ENS</span>
+            <span class="event-desc">Performances gnaoua, artisanat traditionnel et gastronomie régionale marocaine.</span>
+          </div>
+        </div>
+
+        <div class="event-row">
+          <img src="https://images.unsplash.com/photo-1518998053901-5348d3961a04?w=120&q=80" alt="Régions" class="event-img">
+          <div class="event-info">
+            <span class="event-name">Défilé des Régions du Maroc</span>
+            <span class="event-meta">📅 22 Juin 2026 &nbsp;·&nbsp; 📍 Hall principal</span>
+            <span class="event-desc">Chaque région représentée par ses costumes traditionnels, musiques et spécialités.</span>
+          </div>
+        </div>
+      </section>
+
+    </div>
+  </main>
+
+  <!-- FOOTER -->
+  <footer class="text-light py-3 custom-footer">
+    <div class="container d-flex flex-column flex-md-row justify-content-between align-items-center">
+      <div class="mb-2 mb-md-0 text-center text-md-start">
+        <span class="text-success fw-bold d-block" style="letter-spacing:.08em;">GEU · ENS</span>
+        <small class="text-white-50">TEL: +212 5 24 34 01 25 | EMAIL: contact@geu-marrakech.ac.ma</small>
+      </div>
+      <img src="logo_uca.png" alt="Logo UCA" height="40" style="opacity:.9;"
+           onerror="this.src='https://via.placeholder.com/100x40?text=LOGO'">
+    </div>
+  </footer>
+
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/bootstrap/5.3.3/js/bootstrap.bundle.min.js"></script>
+</body>
 </html>
