@@ -695,3 +695,95 @@ body {
   width: 65px;                  /* bigger logo */
   opacity: 0.95;
 }
+
+/* code css historique */
+
+#historique {
+    /* Fond sombre semi-transparent pour détacher la section du background global */
+    background: rgba(0, 0, 0, 0.7); 
+    /* Réduction du padding : 250px était trop important, 50px est idéal */
+    padding: 60px 20px; 
+    border-radius: 30px;
+    margin-top: 30px;
+    margin-bottom: 30px;
+    /* Ajout d'un flou derrière le bloc pour la lisibilité */
+    backdrop-filter: blur(8px);
+    border: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+/* On s'assure que les titres de la section sont blancs */
+#historique h2 {
+    color: #ffffff !important;
+}
+
+#historique .text-muted {
+    color: #cccccc !important;
+}
+
+/* Ligne de la Timeline */
+.timeline::after {
+    content: '';
+    position: absolute;
+    width: 2px;
+    /* Couleur cyan/bleu clair pour rappeler l'université et être visible sur le noir */
+    background-color: #0ccec4; 
+    top: 0;
+    bottom: 0;
+    left: 20px;
+    margin-left: -1px;
+}
+
+/* Le petit point sur la ligne */
+.timeline-dot {
+    position: absolute;
+    width: 18px;
+    height: 18px;
+    left: 11px;
+    top: 20px;
+    border-radius: 50%;
+    z-index: 1;
+    background-color: #0ccec4; /* Couleur vive */
+    border: 3px solid #000;
+}
+
+.timeline-date {
+    font-weight: bold;
+    color: #0ccec4; /* Cyan pour la date, très lisible sur sombre */
+    margin-bottom: 5px;
+    font-size: 1rem;
+}
+
+/* Le cadre du texte (Carte d'événement) */
+.timeline-content {
+    padding: 20px;
+    /* Fond blanc très transparent pour un effet "vitre" */
+    background-color: rgba(255, 255, 255, 0.1); 
+    position: relative;
+    border-radius: 15px;
+    border: 1px solid rgba(255, 255, 255, 0.2);
+    transition: 0.3s;
+    /* Texte en blanc pour le contraste */
+    color: #ffffff;
+}
+
+.timeline-content h5 {
+    color: #0ccec4; /* Titre de l'événement en couleur vive */
+}
+
+.timeline-content p {
+    color: #e0e0e0; /* Texte de description en gris très clair */
+}
+
+.timeline-content:hover {
+    background-color: rgba(255, 255, 255, 0.2);
+    border-color: #2d3030e8;
+    transform: translateX(10px);
+}
+
+.divider {
+    height: 4px;
+    width: 80px;
+    background: #85dfda;
+    border-radius: 2px;
+    margin-bottom: 20px;
+}
